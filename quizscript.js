@@ -20,7 +20,7 @@ var prename = $('#prename')
 var fname = $('#fname')
 var sname = $('#sname')
 
-var subjectNow = 'เก็บคะแนนก่อนปลายภาค 1/67'
+var subjectNow = 'เก็บคะแนนก่อนปลายภาค 2/67'
 var nTodo = 30 //กำหนดจำนวนข้อสอบที่จะให้นักเรียนทำ
 
 //ส่วน info แสดงหน้าจอแรก
@@ -47,7 +47,7 @@ console.log('quizdata.length '+quizdata.length)
 var storedData = localStorage.getItem("user");
 if (storedData) {
   var stdData = JSON.parse(storedData);
-  if (stdData.room == null || stdData.no == "" || stdData.stdid == "" || stdData.prename == null || stdData.fname == "" || stdData.sname == "" || stdData.timeScore == "" || stdData.maxScore == "" || stdData.minScore == "") {
+  if (stdData.room == null || stdData.no == "" || stdData.stdid == "" || stdData.prename == null || stdData.fname == "" || stdData.sname == "" || stdData.timeScore == "" || stdData.maxScore == "" || stdData.minScore == "" || subjectNow != stdData.subject) {
     $('#login').show()
     $('#info').hide()
   } else {
