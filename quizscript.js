@@ -47,7 +47,7 @@ console.log('quizdata.length '+quizdata.length)
 var storedData = localStorage.getItem("user");
 if (storedData) {
   var stdData = JSON.parse(storedData);
-  if (stdData.room == null || stdData.no == "" || stdData.stdid == "" || stdData.prename == null || stdData.fname == "" || stdData.sname == "") {
+  if (stdData.room == null || stdData.no == "" || stdData.stdid == "" || stdData.prename == null || stdData.fname == "" || stdData.sname == "" || stdData.timeScore == "" || stdData.maxScore == "" || stdData.minScore == "") {
     $('#login').show()
     $('#info').hide()
   } else {
